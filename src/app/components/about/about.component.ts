@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/Services/common.service'; 
-import { ServerHttpService } from 'src/app/Services/server-http.service';
+// import { ServerHttpService } from 'src/app/Services/server-http.service';
 
 @Component({
   selector: 'app-about',
@@ -15,7 +15,7 @@ export class AboutComponent implements OnInit {
 
   constructor(
     private common: CommonService,
-    private serverHttp: ServerHttpService
+    // private serverHttp: ServerHttpService
   ) {
     // this.age = common.age;
   }
@@ -36,13 +36,13 @@ export class AboutComponent implements OnInit {
     // });
   }
 
-  public addPost() {
-    const newData = { title: 'testing', author: 'author testing' };
-    this.serverHttp.addPosts(newData).subscribe((data) => {
-      console.log('addPost', data);
-      this.posts.push(data);
-    });
-  }
+  // public addPost() {
+  //   const newData = { title: 'testing', author: 'author testing' };
+  //   this.serverHttp.addPosts(newData).subscribe((data) => {
+  //     console.log('addPost', data);
+  //     this.posts.push(data);
+  //   });
+  // }
 
   public tangTuoi() {
     // this.common.age++;
