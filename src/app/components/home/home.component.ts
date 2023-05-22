@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public name = 'Huy Nguyễn';
-  public age: any;
+  public age = 0;
   public vehicles = ['Toyota', 'Honda', 'Nissan', 'Ford', 'Mustang'];
 
   // constructor(private common: CommonService) {

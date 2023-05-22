@@ -85,12 +85,12 @@ export class ServerHttpService {
       .pipe(catchError(this.handleError));
   }
 
-  // public addPosts(data) {
-  //   const url = `${this.REST_API_SERVER}/posts`;
-  //   return this.httpClient
-  //     .post<any>(url, data, this.httpOptions)
-  //     .pipe(catchError(this.handleError));
-  // }
+  public addPosts(data: { title: string; author: string; }) {
+    const url = `${this.REST_API_SERVER}/posts`;
+    return this.httpClient
+      .post<any>(url, data, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

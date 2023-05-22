@@ -1,1 +1,10 @@
-<app-home></app-home>
+<a [routerLink]="['/home']" [routerLinkActive]="'active-link'">
+  Đi tới home
+  <!-- <mat-icon mat-list-icon>home</mat-icon> Bảng điều khiển -->
+</a>
+<a [routerLink]="['/About']" [routerLinkActive]="'active-link'">
+  Đi tới about
+  <!-- <mat-icon mat-list-icon>home</mat-icon> Bảng điều khiển -->
+</a>
+
+<router-outlet></router-outlet>
