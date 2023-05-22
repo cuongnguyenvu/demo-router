@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { CommonService } from '../Services/common.service';
-import { ServerHttpService } from '../Services/server-http.service';
+import { CommonService } from 'src/app/Services/common.service'; 
+import { ServerHttpService } from 'src/app/Services/server-http.service';
 
 @Component({
   selector: 'app-about',
@@ -10,12 +10,12 @@ import { ServerHttpService } from '../Services/server-http.service';
 export class AboutComponent implements OnInit {
   public name = '';
   public age = '';
-  public comments;
-  public posts;
+  public comments = '';
+  public posts: any[] = [];
 
   constructor(
-    // private common: CommonService,
-    // private serverHttp: ServerHttpService
+    private common: CommonService,
+    private serverHttp: ServerHttpService
   ) {
     // this.age = common.age;
   }
